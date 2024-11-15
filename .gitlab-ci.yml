@@ -1,0 +1,39 @@
+# stages:
+#   - build
+#   - deploy
+
+# variables:
+#   FTP_SERVER: "192.168.1.234" # FTP位置
+#   FTP_PATH: "/productPlan/components_share/" # FTP路徑
+#   LOCAL_BUILD_PATH: "/builds/1111_site/components_share/public/" # Gitlab位置
+#   FTP_ACCOUNT: "${FTP_account}" # FTP帳號 變數(gitlab專案>setting>CICD>variable展開)
+#   FTP_PASSWORD: "${FTP_password}" # FTP密碼 變數(gitlab專案>setting>CICD>variable展開)
+
+# build:
+#   image: node:18.12.1
+#   stage: build
+#   script:
+#     - npm install
+#     - npm run build
+#     - mv public public-vue
+#     - mv dist public
+#   artifacts:
+#     paths:
+#       - public
+#   tags:
+#     - event
+#   only:
+#     - dev
+#     # - main
+
+# deploy:
+#   stage: deploy
+#   only:
+#     - dev
+#   tags:
+#     - event
+#   script:
+#     - lftp -u $FTP_ACCOUNT,$FTP_PASSWORD $FTP_SERVER -e "
+#       lcd $LOCAL_BUILD_PATH;
+#       mirror -e --exclude .git --exclude .md --exclude-glob *.yml -Revp . $FTP_PATH;
+#       quit"
