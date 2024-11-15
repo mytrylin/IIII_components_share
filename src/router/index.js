@@ -1,8 +1,8 @@
-import { createRouter, createWebHistory } from 'vue-router';
-import index from '@/views/Index.vue';
+import { createRouter, createWebHistory, createWebHashHistory } from 'vue-router';
+const index = () => import('@/views/Index.vue')
 
 const router = createRouter ({
-  history: createWebHistory(import.meta.env.VITE_BASE_URL),
+  history: createWebHashHistory(import.meta.env.VITE_BASE_URL),
   routes: [
     {
       path: '/index',
