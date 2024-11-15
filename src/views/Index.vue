@@ -63,7 +63,7 @@ const bellItems = ref([
 /* Header Components 引入 END */
 
 /* Footer Components 引入 START */
-// import twFooter from "@/components/twFooter.vue";
+import twFooter from "@/components/twFooter.vue";
 /* Footer引入 END */
 
 /* SearchBar Components 引入 START */
@@ -283,19 +283,19 @@ import twLoading from "@/components/twLoading.vue";
       <h2>Header</h2>
       <twHeader :userName="userName" :userImage="userImage" :isLoggedIn="isLoggedIn" :bellItems="bellItems"
         @loginStatusChanged="handleLoginStatusChange"></twHeader>
-    </section>
+    </section> -->
 
     <section class="demo">
       <h2>Footer</h2>
       <twFooter></twFooter>
     </section>
 
-    <section class="demo" style="position: relative; z-index: 1;">
+    <!-- <section class="demo" style="position: relative; z-index: 1;">
       <h2>SearchBar01</h2>
       <twSearchBar :inSide="false" :searchHistory="searchHistory" :searchBarDropdown="searchBarDropdown"></twSearchBar>
-    </section>
+    </section> -->
 
-    <section class="demo" style="position: relative; z-index: 0;">
+    <!-- <section class="demo" style="position: relative; z-index: 0;">
       <h2>SearchBar02</h2>
       <twSearchBar :inSide="true" :searchHistory="searchHistory" :searchBarDropdown="searchBarDropdown"></twSearchBar>
     </section> -->
