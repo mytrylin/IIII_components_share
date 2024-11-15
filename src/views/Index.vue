@@ -12,7 +12,7 @@ onMounted(() => {
 
 /* Header Components 引入 START */
 import { ref } from 'vue';
-// import twHeader from "@/components/twHeader.vue";
+import twHeader from "@/components/twHeader.vue";
 
 // 使用者資訊
 const userName = "王曉明";
@@ -279,11 +279,11 @@ import twLoading from "@/components/twLoading.vue";
   <main>
     <h1>共用元件</h1>
 
-    <!-- <section class="demo">
+    <section class="demo">
       <h2>Header</h2>
       <twHeader :userName="userName" :userImage="userImage" :isLoggedIn="isLoggedIn" :bellItems="bellItems"
         @loginStatusChanged="handleLoginStatusChange"></twHeader>
-    </section> -->
+    </section>
 
     <section class="demo">
       <h2>Footer</h2>
