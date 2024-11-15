@@ -12,7 +12,7 @@ onMounted(() => {
 
 /* Header Components 引入 START */
 import { ref } from 'vue';
-import twHeader from "@/components/twHeader.vue";
+// import twHeader from "@/components/twHeader.vue";
 
 // 使用者資訊
 const userName = "王曉明";
@@ -63,12 +63,12 @@ const bellItems = ref([
 /* Header Components 引入 END */
 
 /* Footer Components 引入 START */
-import twFooter from "@/components/twFooter.vue";
+// import twFooter from "@/components/twFooter.vue";
 /* Footer引入 END */
 
 /* SearchBar Components 引入 START */
 import { provide } from 'vue';
-import twSearchBar from "@/components/twSearchBar.vue";
+// import twSearchBar from "@/components/twSearchBar.vue";
 
 // inside
 // const isInSide = ref(false); // 在內/外顯示 true: 內, false: 外;
@@ -222,7 +222,7 @@ provide('searchBarBTN', searchBarBTN);
 /* SearchBar Components 引入 END */
 
 /* twPagination Components 引入 START */
-import twPagination from "@/components/twPagination.vue";
+// import twPagination from "@/components/twPagination.vue";
 // 預設 pagination query
 const query1 = ref({
   page:1,
@@ -279,7 +279,7 @@ import twLoading from "@/components/twLoading.vue";
   <main>
     <h1>共用元件</h1>
 
-    <section class="demo">
+    <!-- <section class="demo">
       <h2>Header</h2>
       <twHeader :userName="userName" :userImage="userImage" :isLoggedIn="isLoggedIn" :bellItems="bellItems"
         @loginStatusChanged="handleLoginStatusChange"></twHeader>
@@ -298,7 +298,7 @@ import twLoading from "@/components/twLoading.vue";
     <section class="demo" style="position: relative; z-index: 0;">
       <h2>SearchBar02</h2>
       <twSearchBar :inSide="true" :searchHistory="searchHistory" :searchBarDropdown="searchBarDropdown"></twSearchBar>
-    </section>
+    </section> -->
 
     <section class="demo">
       <h2>Loading</h2>
@@ -319,14 +319,14 @@ import twLoading from "@/components/twLoading.vue";
       </div>
     </section>
 
-    <section class="demo">
+    <!-- <section class="demo">
       <h2>Pagination - Use Loading</h2>
       <twPagination v-model="query1.page" :total="query1.totalrecord" :pageSize="query1.pageSize"
         :useLoading="true"></twPagination><br>
       <h2>Pagination - No Loading</h2>
       <twPagination v-model="query2.page" :total="query2.totalrecord" :pageSize="query2.pageSize"
         :useLoading="false"></twPagination>
-    </section>    
+    </section>     -->
   </main>
 </template>
 
