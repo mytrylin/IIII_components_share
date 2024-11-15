@@ -11,6 +11,7 @@
     "deploy": "vite build && gh-pages -d dist"
   },
   "dependencies": {
+    "unplugin-auto-import": "^0.17.1",
     "@vueuse/core": "^9.2.0",
     "@vueuse/head": "^2.0.0",
     "axios": "^0.27.2",
