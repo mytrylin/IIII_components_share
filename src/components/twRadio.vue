@@ -94,7 +94,7 @@ function handleChangeRadio(value) {
         bg-white outline-none resize-none mr-0.5
         checked:bg-radio-checked checked:border-[#1383B5]
       "
-      :class="{ 'border-gray-200 bg-gray-300': disabled }"
+      :class="{ 'border-gray-200 bg-gray-400': disabled }"
       @click="handleChangeRadio(value)" :value="value" v-model="modelValueRef"
        :name="name" :id="id" :checked="modelValueRef === value" :disabled="disabled">
     <label class="mr-1" :for="id">{{ label }}</label>
