@@ -273,11 +273,99 @@ const jobsCardList = ref([
 import twLoading from "@/components/twLoading.vue";
 /* twLoading Components 引入 END */
 
+/* twRadio Components 引入 START */
+import twRadio from "@/components/twRadio.vue";
+const mySex = ref(1)
+const graduatedStatus = ref(1)
+const graduatedStatus2 = ref(3)
+const radioList = [
+  {
+    value: 1,
+    label: '男',
+    id: 'sex_1',
+    name: 'man',
+    tooltip: '你是生理男人',
+  },
+  {
+    value: 0,
+    label: '女',
+    id: 'sex_0',
+    name: 'female',
+    tooltip: '妳是生理女人',
+  },
+  {
+    value: 2,
+    label: '非二次元',
+    id: 'sex_2',
+    name: 'sex_other',
+    tooltip: '你/ 妳是非二次元性別',
+    disabled: true
+  },
+]
+const graduatedList = [
+  {
+    value: 0,
+    label: '在學',
+    id: 'graduated_0',
+    name: '在學',
+  },
+  {
+    value: 1,
+    label: '畢業',
+    id: 'graduated_1',
+    name: '畢業',
+  },
+  {
+    value: 2,
+    label: '肄業',
+    id: 'gradudted_2',
+    name: '肄業',
+    tooltip: '還沒畢業',
+  }
+]
+const graduatedList2 = [
+  {
+    value: 3,
+    label: '榮譽',
+    id: 'gradudted_3',
+    name: '榮譽學位',
+    tooltip: '學校特別頒發榮譽學位',
+    disabled: true
+  },
+  {
+    value: 4,
+    label: '其他',
+    id: 'gradudted_4',
+    name: '其他',
+    tooltip: '可能因為其他違規，造成學籍被註銷，或其他狀況',
+    disabled: true
+  },
+]
+/* twRadio Components 引入 END */
+
 </script>
 
 <template>
   <main>
     <h1>共用元件</h1>
+
+    <section class="demo">
+      <h2>Radio General</h2>
+      <div class="relative flex bg-white p-[10px_10px]">
+        <twRadio v-for="(item, index) in radioList" :key="index" v-model="mySex" :value="item.value"
+          :id="item.id" :label="item.label" :name="item.name" :tooltip="item.tooltip" :disabled="item.disabled"
+        />
+      </div>
+      <h2 class="mt-6">Radio Button</h2>
+      <div class="relative flex bg-white p-[20px_10px]">
+        <twRadio :radioCase="1" v-for="(item, index) in graduatedList" :key="index" v-model="graduatedStatus" :value="item.value"
+          :id="item.id" :label="item.label" :name="item.name" :tooltip="item.tooltip" :disabled="item.disabled"
+        />
+        <twRadio :radioCase="1" v-for="(item, index) in graduatedList2" :key="index" v-model="graduatedStatus2" :value="item.value"
+          :id="item.id" :label="item.label" :name="item.name" :tooltip="item.tooltip" :disabled="item.disabled"
+        />
+      </div>
+    </section>
 
     <section class="demo">
       <h2>Header</h2>
@@ -363,4 +451,5 @@ h2 {
   padding: 8px;
   margin: 24px auto;
 }
+
 </style>

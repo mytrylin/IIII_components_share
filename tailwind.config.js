@@ -175,6 +175,10 @@ export default {
         'golast-disabled': "url('https://images.1111.com.tw/event/img/event24/salarycomparison/golast_no.svg')",
         'icon-favorite': "url('https://www.1111.com.tw/Content2/assets/images/icon/Btn-AddtoFav-Default.svg')",
         'icon-favorite-hover': "url('https://www.1111.com.tw/Content2/assets/images/icon/Btn-AddtoFav-Hover.svg')",
+        'radio-checked': "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%231383B5'/%3e%3c/svg%3e\")"
+      },
+      boxShadow: {
+        'qtb-shadow': '0px 2px 6px 0px rgba(0, 0, 0, 0.15)'
       },
       transitionDuration: {
         '350': '350ms',
